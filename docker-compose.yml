@@ -1,0 +1,45 @@
+services:
+  # Development environment with Jupyter Lab
+  jupyter:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: development
+    container_name: bigdata-jupyter
+    ports:
+      - "8888:8888"  # Jupyter Lab
+    volumes:
+      - ./notebooks:/app/notebooks
+      - ./src:/app/src
+      - ./data:/app/data
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+      - SPARK_LOCAL_IP=0.0.0.0
+    networks:
+      - bigdata-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8888"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # PySpark processor for batch jobs
+  spark-processor:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: production
+    container_name: bigdata-spark-processor
+    volumes:
+      - ./src:/app/src
+      - ./data:/app/data
+    environment:
+      - SPARK_LOCAL_IP=0.0.0.0
+    networks:
+      - bigdata-network
+    depends_on:
+      - jupyter
+
+networks:
+  bigdata-network:
+    driver: bridge

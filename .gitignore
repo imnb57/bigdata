@@ -1,0 +1,54 @@
+# .gitignore for Big Data Learning Project
+
+# Python
+*.py[cod]
+*$py.class
+__pycache__/
+*.so
+.Python
+env/
+venv/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Data
+data/*.csv
+data/*.json
+data/*.parquet
+
+# Logs
+*.log
+logs/
+
+# Spark
+metastore_db/
+spark-warehouse/
+.spark-hadoop/
+
+# Docker
+.docker/
+
+# Environment variables
+.env
+.env.local
+
+# Cache
+.cache/
+*.cache
+jdk-17.0.2/
