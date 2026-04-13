@@ -15,6 +15,7 @@ A comprehensive learning environment for big data processing using PySpark with 
 
 - Docker & Docker Compose
 - OR Python 3.11+ (for local setup without Docker)
+- Java 17+ (required for local PySpark execution)
 - 4GB+ RAM recommended
 
 ## 🚀 Quick Start
@@ -44,6 +45,9 @@ cd d:\python\bigdata
 
 # Activate virtual environment
 .\.venv\Scripts\activate
+
+# Verify Java is installed (required by PySpark)
+java -version
 
 # Install dependencies
 pip install -r requirements.txt
