@@ -1,0 +1,12 @@
+line_id,line_name,status,timestamp,data_source
+bakerloo,Bakerloo,Good Service,2026-05-12T06:49:17.004068,TfL_LineStatus
+central,Central,Good Service,2026-05-12T06:49:17.004092,TfL_LineStatus
+circle,Circle,Good Service,2026-05-12T06:49:17.004097,TfL_LineStatus
+district,District,Good Service,2026-05-12T06:49:17.004102,TfL_LineStatus
+hammersmith-city,Hammersmith & City,Good Service,2026-05-12T06:49:17.004116,TfL_LineStatus
+jubilee,Jubilee,Good Service,2026-05-12T06:49:17.004122,TfL_LineStatus
+metropolitan,Metropolitan,Good Service,2026-05-12T06:49:17.004129,TfL_LineStatus
+northern,Northern,Good Service,2026-05-12T06:49:17.004134,TfL_LineStatus
+piccadilly,Piccadilly,Good Service,2026-05-12T06:49:17.004139,TfL_LineStatus
+victoria,Victoria,Good Service,2026-05-12T06:49:17.004143,TfL_LineStatus
+waterloo-city,Waterloo & City,Good Service,2026-05-12T06:49:17.004148,TfL_LineStatus

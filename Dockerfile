@@ -36,8 +36,8 @@ EXPOSE 8888
 # Expose Spark UI ports
 EXPOSE 4040
 
-# Default command: start Jupyter Lab
-CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root"]
+# Default command: start Jupyter Lab without token/password prompts
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--ServerApp.token=''", "--ServerApp.password=''"]
 
 # Production stage
 FROM base AS production

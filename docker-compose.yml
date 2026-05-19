@@ -6,6 +6,7 @@ services:
       dockerfile: Dockerfile
       target: development
     container_name: bigdata-jupyter
+    command: jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root --ServerApp.token='' --ServerApp.password=''
     ports:
       - "8888:8888"  # Jupyter Lab
     volumes:
